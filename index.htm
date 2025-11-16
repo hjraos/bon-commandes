@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des Bons de Commande</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Bon de Commande</h1>
+
+    <div class="card">
+      <label>Date :</label>
+      <input type="date" id="bcDate">
+
+      <label>Numéro BC :</label>
+      <input type="text" id="bcNumero">
+
+      <label>Fournisseur :</label>
+      <select id="fournisseur"></select>
+    </div>
+
+    <div class="product-section">
+      <h2>Produits</h2>
+
+      <div class="card">
+        <label>Produit :</label>
+        <select id="produit"></select>
+
+        <label>Quantité :</label>
+        <input type="number" id="quantite" min="1">
+
+        <button onclick="addProduct()" class="btn">Ajouter</button>
+      </div>
+
+      <table id="tableProduits">
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Nom</th>
+            <th>Quantité</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <button class="btn-primary" onclick="saveBC()">Enregistrer le BC</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
